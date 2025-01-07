@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the homepage of Environmental Property Audits.">
+    <title>garagesale | home</title>
+    <link rel="icon" type="image/png" href="Images/ep-audits-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-white">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6 z-10 border-b border-gray-500 h-[10vh]">
+        <div class="flex items-center flex-no-shrink text-white">
+            <svg class="mr-2" width="25"viewBox="0 0 411 377" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M57.8945 376.319V186.844L34.2102 205.266L0 153.949L205.265 0L307.897 76.9746L410.529 153.949L376.319 205.266L352.634 186.844V376.319H321.055V186.844H89.4745V376.319H57.8945ZM300.002 250.002H110.527V207.897H300.002V250.002ZM300.002 313.161H110.527V271.055H300.002V313.161ZM300.002 376.319H110.527V334.214H300.002V376.319Z" fill="white"/>
+                </svg>
+            <span class="font-semibold text-xl tracking-tight">garagesale</span>
+        </div>
+        <form class="flex items-center" action="/search" method="get">
+            <input type="text" name="q" placeholder="search..." class="px-2 py-1 bg-gray-50 border border-gray-900 rounded-md text-black w-[25vw]"/>
+        </form>
+        <div class="block lg:hidden">
+            <button
+                class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:bg-white"
+                onclick="myFunction()">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full hidden lg:block lg:flex lg:items-center lg:w-auto" id="nav">
+            <div class="text-sm lg:flex-grow">
+                <a href="#responsive-header"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+                    Docs
+                </a>
+                <a href="#responsive-header"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+                    Examples
+                </a>
+                <a href="#responsive-header"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
+                    Blog
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="flex flex-col items-center justify-center h-[90vh]">
+            <div class="flex items-center justify-center">
+                <div class="w-[60vw] h-[33vh] bg-white mb-16" id="intro-box"></div>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-700 pb-4">Welcome to GarageSale</h1>
+            <p class="text-lg text-gray-700 pb-4">Your trusted, sustainable marketplace
+                    for secondhand goods.</p>
+            <button class="text-black border border-black rounded-md py-2 px-4 scale-75">Start Browsing</button>
+        </div>
+    </section>
+
+    <section class="h-[75vh] bg-white px-[10vw] py-28">
+        <div>
+            <h2 class="text-gray-700 text-3xl font-semibold">Featured Categories</h2>
+        </div>
+        <div class="flex flex-row justify-between items-center [100%] mt-16">
+            <div class="w-[20vw] h-[20vw] rounded-lg bg-gray-700">
+                <p class="p-4">Electronics & Media</p>
+            </div>
+            <div class="w-[20vw] h-[20vw] rounded-lg bg-gray-700">
+                <p class="p-4">Home & Garden</p>
+            </div>
+            <div class="w-[20vw] h-[20vw] rounded-lg bg-gray-700">
+                <p class="p-4">Clothing, Shoes, & Accessories</p>
+            </div>
+            <svg class="w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#374151" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+        </div>
+    </section>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            x.classList.toggle("hidden");
+        }
+
+        const searchInput = document.querySelector('.search-bar input');
+
+        searchInput.addEventListener('focus', () => {
+            searchInput.style.borderColor = '#00f';
+        });
+
+        searchInput.addEventListener('blur', () => {
+            searchInput.style.borderColor = '#ccc';
+        });
+    </script>
+</body>
+
+</html>
